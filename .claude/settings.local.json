@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npx tsc *)",
+      "Bash(node *)",
+      "Bash(timeout 12 npx tsx src/server.ts)",
+      "Bash(timeout 15 npx tsx src/server.ts)",
+      "Bash(npx tsx *)",
+      "Bash(echo \"Server PID: $!\")",
+      "Read(//tmp/**)",
+      "Bash(curl -s -X POST http://localhost:8080/api/auth/register -H 'Content-Type: application/json' -d '{\"username\":\"testuser123\",\"password\":\"Test1234!\"}')",
+      "Bash(pkill -f \"tsx src/server.ts\")",
+      "Bash(curl -s -X POST http://localhost:8080/api/auth/register -H \"Content-Type: application/json\" -d \"{\\\\\"username\\\\\":\\\\\"testuser99\\\\\",\\\\\"password\\\\\":\\\\\"Test@1234\\\\\"}\")",
+      "Bash(curl -s http://localhost:8080/health)",
+      "Bash(curl -s -X POST http://localhost:8080/api/auth/login -H \"Content-Type: application/json\" -d \"{\\\\\"username\\\\\":\\\\\"baduser\\\\\",\\\\\"password\\\\\":\\\\\"bad\\\\\"}\")",
+      "Bash(curl -s -X POST http://localhost:8080/api/auth/register -H \"Content-Type: application/json\" -d \"{\\\\\"username\\\\\":\\\\\"ab\\\\\",\\\\\"password\\\\\":\\\\\"weak\\\\\"}\")",
+      "Bash(curl *)",
+      "Bash(PORT=8088 npx tsx src/server.ts)",
+      "Bash(kill %1)",
+      "PowerShell(Stop-Process *)",
+      "Bash(netstat -ano)"
+    ]
+  }
+}
